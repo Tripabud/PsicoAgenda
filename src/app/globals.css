@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 20% 98%; /* Soft Gray, slightly bluish */
+    --foreground: 210 10% 23%; /* Darker Gray for text */
+
+    --card: 0 0% 100%; /* White for card background */
+    --card-foreground: 210 10% 23%;
+
+    --popover: 0 0% 100%; /* White for popover background */
+    --popover-foreground: 210 10% 23%;
+
+    --primary: 174 45% 50%; /* Calming Teal #409A8E (adjusted for more depth) */
+    --primary-foreground: 0 0% 100%; /* White for text on Teal */
+
+    --secondary: 210 20% 94%; /* Lighter gray for secondary elements */
+    --secondary-foreground: 210 10% 30%;
+
+    --muted: 210 20% 88%; /* Slightly darker gray for muted text/backgrounds */
+    --muted-foreground: 210 10% 45%; 
+
+    --accent: 35 100% 58%; /* Light Orange #FFB300 (adjusted for vibrancy) */
+    --accent-foreground: 20 90% 5%; /* Dark brown/black for text on Orange for contrast */
+
+    --destructive: 0 72% 51%; /* Default: 0 84.2% 60.2% */
+    --destructive-foreground: 0 0% 100%; 
+
+    --border: 210 15% 88%; /* Adjusted border to match muted/secondary */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 174 45% 45%; /* Ring color based on primary (Teal) */
+    
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 15% 12%; /* Darker, slightly desaturated blue-gray */
+    --foreground: 210 10% 85%; 
+
+    --card: 210 15% 16%; /* Slightly lighter than background for cards */
+    --card-foreground: 210 10% 85%;
+
+    --popover: 210 15% 10%; /* Darker for popovers */
+    --popover-foreground: 210 10% 85%;
+
+    --primary: 174 40% 58%; /* Teal, slightly brighter for dark mode */
+    --primary-foreground: 0 0% 100%; 
+
+    --secondary: 210 15% 20%; /* Darker secondary */
+    --secondary-foreground: 210 10% 75%;
+
+    --muted: 210 15% 25%; 
+    --muted-foreground: 210 10% 60%; 
+
+    --accent: 35 90% 65%; /* Orange, slightly brighter for dark mode */
+    --accent-foreground: 20 90% 5%; /* Dark brown/black for text on Orange for contrast */
+
+    --destructive: 0 60% 55%; 
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 25%;
+    --input: 210 15% 20%;
+    --ring: 174 40% 50%; 
+    
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1; /* Enable common ligatures */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+}
