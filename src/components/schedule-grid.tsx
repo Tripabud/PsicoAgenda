@@ -58,7 +58,7 @@ export function ScheduleGrid({
             </div>
             <div className="flex items-center text-xs">
               <DollarSign className="w-3 h-3 mr-1" />
-              <span>{appointment.amountPaid && appointment.amountPaid > 0 ? `${appointment.amountPaid.toFixed(2)}` : 'No Pagado'}</span>
+              <span>{(appointment.amountPaid ?? 0) > 0 ? `${appointment.amountPaid!.toFixed(2)}` : 'No Pagado'}</span>
             </div>
           </div>
         </div>
